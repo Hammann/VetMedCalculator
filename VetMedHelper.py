@@ -16,7 +16,11 @@ except:
 master = tk.Tk()
 master.title('PetHelper | Be kind. Work hard.')
 master.state('zoomed')
-master.configure(bg="#006400")
+master.configure(bg="#006ee6")
+
+#set window icon
+master.iconbitmap(r'C:\Users\Branden\PycharmProjects\pythonProject\PetHelper\icon.ico')
+
 
 # Weight & Calculate Button Frame
 WC = Frame(master)
