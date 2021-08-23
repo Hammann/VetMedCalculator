@@ -3,7 +3,6 @@ import tkinter.font as font
 from tkinter import ttk
 import webbrowser
 from tkinter import *
-import math
 
 try:
     from ctypes import windll
@@ -15,7 +14,7 @@ except:
 # Create the master object
 
 master = tk.Tk()
-master.title("VMH")
+master.title('PetHelper | Be kind. Work hard.')
 master.state('zoomed')
 master.configure(bg="#006400")
 
@@ -87,13 +86,13 @@ def calculate_LB_To_KG(*args):
     except ValueError:
         pass
 
-def calculate_Activyl_Plus(*args):
-    try:
-        weight = float(weight_value.get())
-        dosage = (weight / 2.2)
-        dose_Activyl_Plus.set(f"{dosage:.2f}")
-    except ValueError:
-        pass
+#def calculate_Activyl_Plus(*args):
+#    try:
+#        weight = float(weight_value.get())
+#        dosage = (weight / 2.2)
+#        dose_Activyl_Plus.set(f"{dosage:.2f}")
+#    except ValueError:
+#        pass
 
 def calculate_Albon_50mg_1(*args):
     try:
@@ -122,7 +121,7 @@ def calculate_Albon_500mg_1(*args):
 def calculate_Albon_500mg_2_10(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 28
         dose_Albon_500mg_2_10.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -130,7 +129,7 @@ def calculate_Albon_500mg_2_10(*args):
 def calculate_Amoxicillin_under7LB(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 11)/50
         dose_Amoxicillin_under7LB.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -138,7 +137,7 @@ def calculate_Amoxicillin_under7LB(*args):
 def calculate_Amoxicillin_over7LB(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 11
         dose_Amoxicillin_over7LB.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -146,7 +145,7 @@ def calculate_Amoxicillin_over7LB(*args):
 def calculate_dose_Azithromycin(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 5)/40
         dose_Azithromycin.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -154,7 +153,7 @@ def calculate_dose_Azithromycin(*args):
 def calculate_Baytril_tablets(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 10
         dose_Baytril_tablets.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -162,7 +161,7 @@ def calculate_Baytril_tablets(*args):
 def calculate_Baytril_22point7(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 5)/22.7
         dose_Baytril_22point7.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -170,7 +169,7 @@ def calculate_Baytril_22point7(*args):
 def calculate_Baytril_100(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 5)/100
         dose_Baytril_100.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -178,7 +177,7 @@ def calculate_Baytril_100(*args):
 def calculate_Cephalexin_250_500mg_tablets(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 22
         dose_Cephalexin_250_500mg_tablets.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -186,7 +185,7 @@ def calculate_Cephalexin_250_500mg_tablets(*args):
 def calculate_Cerenia_10mg(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 1)/10
         dose_Cerenia_10mg.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -194,7 +193,7 @@ def calculate_Cerenia_10mg(*args):
 def calculate_Clindamycin_75_150mg(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 11
         dose_Clindamycin_75_150mg.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -202,7 +201,7 @@ def calculate_Clindamycin_75_150mg(*args):
 def calculate_Clindamycin_25(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 11)/25
         dose_Clindamycin_25.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -210,7 +209,7 @@ def calculate_Clindamycin_25(*args):
 def calculate_Clavamox_under7lbs(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 13.75)/62.5
         dose_Clavamox_under7lbs.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -218,7 +217,7 @@ def calculate_Clavamox_under7lbs(*args):
 def calculate_Clavamox_over7lbs(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 13.75
         dose_Clavamox_over7lbs.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -226,7 +225,7 @@ def calculate_Clavamox_over7lbs(*args):
 def calculate_Convenia_80(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 8)/80
         dose_Convenia_80.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -234,7 +233,7 @@ def calculate_Convenia_80(*args):
 def calculate_Doxycycline_50(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 10)/50
         dose_Doxycycline_50.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -242,7 +241,7 @@ def calculate_Doxycycline_50(*args):
 def calculate_Doxycycline_100mg_tablets(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 10
         dose_Doxycycline_100mg_tablets.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -250,7 +249,7 @@ def calculate_Doxycycline_100mg_tablets(*args):
 def calculate_Entyce_cats(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 2)/30
         dose_Entyce_cats.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -258,7 +257,7 @@ def calculate_Entyce_cats(*args):
 def calculate_Entyce_dogs(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 3)/30
         dose_Entyce_dogs.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -266,23 +265,23 @@ def calculate_Entyce_dogs(*args):
 def calculate_Famciclovir_250mg(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 40
         dose_Famciclovir_250mg.set(f"{dosage:.2f}")
     except ValueError:
         pass
 
-def calculate_Frontline(*args):
-    try:
-        weight = float(weight_value.get())
-        dosage = (weight / 2.2)
-        dose_Frontline.set(f"{dosage:.2f}")
-    except ValueError:
-        pass
+# def calculate_Frontline(*args):
+#    try:
+#        weight = float(weight_value.get())
+#        dosage = (weight / 2.2)
+#        dose_Frontline.set(f"{dosage:.2f}")
+#    except ValueError:
+#       pass
 
 def calculate_Metronidazole_250_500mg_Tablets(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 25)
         dose_Metronidazole_250_500mg_Tablets.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -290,7 +289,7 @@ def calculate_Metronidazole_250_500mg_Tablets(*args):
 def calculate_Metronidazole_50(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 10)/50
         dose_Metronidazole_50.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -298,7 +297,7 @@ def calculate_Metronidazole_50(*args):
 def calculate_Panacur_1(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 50)/100
         dose_Panacur_1.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -306,7 +305,7 @@ def calculate_Panacur_1(*args):
 def calculate_Panacur_2(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 50)/100
         dose_Panacur_2.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -314,7 +313,7 @@ def calculate_Panacur_2(*args):
 def calculate_Ponazuril_50(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 50)/50
         dose_Ponazuril_50.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -322,39 +321,39 @@ def calculate_Ponazuril_50(*args):
 def calculate_Ponazuril_150(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 50)/150
         dose_Ponazuril_150.set(f"{dosage:.2f}")
     except ValueError:
         pass
 
-def calculate_Praziquantel(*args):
-    try:
-        weight = float(weight_value.get())
-        dosage = (weight / 2.2)
-        dose_Praziquantel.set(f"{dosage:.2f}")
-    except ValueError:
-        pass
+# def calculate_Praziquantel(*args):
+#    try:
+#        weight = float(weight_value.get())
+#        dosage = (weight / 2.2)
+#        dose_Praziquantel.set(f"{dosage:.2f}")
+#    except ValueError:
+#        pass
 
 def calculate_Pyrantel_Pamoate(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight * 5)/50
         dose_Pyrantel_Pamoate.set(f"{dosage:.2f}")
     except ValueError:
         pass
 
-def calculate_Revolution(*args):
-    try:
-        weight = float(weight_value.get())
-        dosage = (weight / 2.2)
-        dose_Revolution.set(f"{dosage:.2f}")
-    except ValueError:
-        pass
+#def calculate_Revolution(*args):
+#    try:
+#        weight = float(weight_value.get())
+#        dosage = (weight / 2.2)
+#        dose_Revolution.set(f"{dosage:.2f}")
+#    except ValueError:
+#        pass
 
 def calculate_Trazadone_Standard(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = ((weight / 2.2) * 7)
         dose_Trazadone_Standard.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -362,7 +361,7 @@ def calculate_Trazadone_Standard(*args):
 def calculate_Trazadone_High_Dosage(*args):
     try:
         weight = float(weight_value.get())
-        dosage = (weight / 2.2)
+        dosage = (weight / 2.2) * 10
         dose_Trazadone_High_Dosage.set(f"{dosage:.2f}")
     except ValueError:
         pass
@@ -371,7 +370,7 @@ def calculate(*args):
     try:
         (
         calculate_LB_To_KG(),
-        calculate_Activyl_Plus(),
+        #calculate_Activyl_Plus(),
         calculate_Albon_50mg_1(),
         calculate_Albon_50mg_2_10(),
         calculate_Albon_500mg_1(),
@@ -394,16 +393,16 @@ def calculate(*args):
         calculate_Entyce_cats(),
         calculate_Entyce_dogs(),
         calculate_Famciclovir_250mg(),
-        calculate_Frontline(),
+        #calculate_Frontline(),
         calculate_Metronidazole_250_500mg_Tablets(),
         calculate_Metronidazole_50(),
         calculate_Panacur_1(),
         calculate_Panacur_2(),
         calculate_Ponazuril_50(),
         calculate_Ponazuril_150(),
-        calculate_Praziquantel(),
+        #calculate_Praziquantel(),
         calculate_Pyrantel_Pamoate(),
-        calculate_Revolution(),
+        #calculate_Revolution(),
         calculate_Trazadone_Standard(),
         calculate_Trazadone_High_Dosage()
         )
@@ -413,7 +412,7 @@ def calculate(*args):
 
 # Font
 
-font.nametofont("TkDefaultFont").configure(family="Akzidenz-Grotesk", size=9)
+font.nametofont("TkDefaultFont").configure(family="Akzidenz-Grotesk", size=10)
 
 # Amount Label
 
@@ -445,17 +444,17 @@ Unit = tk.Label(Frame, text="Unit ", font="helvetica 11 bold").grid(row=2, colum
 Route = tk.Label(Frame, text="Route ", font="helvetica 11 bold").grid(row=2, column=5)
 Frequency = tk.Label(Frame, text="Frequency ", font="helvetica 11 bold").grid(row=2, column=6)
 Duration = tk.Label(Frame, text="Duration ", font="helvetica 11 bold").grid(row=2, column=7)
-Used_For = tk.Label(Frame, text="Used for ", font="helvetica 11 bold").grid(row=2, column=8)
+Used_For = tk.Label(Frame, text="Used for (click for more information) ", font="helvetica 11 bold").grid(row=2, column=8)
 
-Activyl_Plus = tk.Label(Frame, text="Activyl Plus (dogs only, 8+ Weeks)").grid(row=3, column=0)
+#Activyl_Plus = tk.Label(Frame, text="Activyl Plus (dogs only, 8+ Weeks)").grid(row=3, column=0)
 #Activyl_Plus_Dosage = tk.Label(Frame, textvariable=f"{dose_Activyl_Plus}").grid(row=3, column=1)
-Activyl_Species = tk.Label(Frame, text="Dogs").grid(row=3, column=2)
-Activyl_MGperKG = tk.Label(Frame, text="").grid(row=3, column=3)
-Activyl_Unit = tk.Label(Frame, text="").grid(row=3, column=4)
-Activyl_Route = tk.Label(Frame, text="Tropical").grid(row=3, column=5)
-Activyl_Frequency = tk.Label(Frame, text="SID").grid(row=3, column=6)
-Activyl_Duration = tk.Label(Frame, text="Once a month").grid(row=3, column=7)
-Activyl_Used_For = tk.Button(Frame, text="Flea & Tick Preventative", command=lambda: webbrowser.open('https://www.ndrugs.com/?s=activyl')).grid(row=3, column=8)
+#Activyl_Species = tk.Label(Frame, text="Dogs").grid(row=3, column=2)
+#Activyl_MGperKG = tk.Label(Frame, text="").grid(row=3, column=3)
+#Activyl_Unit = tk.Label(Frame, text="").grid(row=3, column=4)
+#Activyl_Route = tk.Label(Frame, text="Tropical").grid(row=3, column=5)
+#Activyl_Frequency = tk.Label(Frame, text="SID").grid(row=3, column=6)
+#Activyl_Duration = tk.Label(Frame, text="Once a month").grid(row=3, column=7)
+#Activyl_Used_For = tk.Button(Frame, text="Flea & Tick Preventative", command=lambda: webbrowser.open('https://www.ndrugs.com/?s=activyl')).grid(row=3, column=8)
 
 
 Albon_50mg_1 = tk.Label(Frame, text="Albon (50mg/ml) Day 1").grid(row=4, column=0)
@@ -678,15 +677,15 @@ Famciclovir_250mg_Frequency = tk.Label(Frame, text="BID").grid(row=25, column=6)
 Famciclovir_250mg_Duration = tk.Label(Frame, text="5 days").grid(row=25, column=7)
 Famciclovir_250mg_Used_For = tk.Button(Frame, text="Feline URI (only to be Rx by Vet)", command=lambda: webbrowser.open('https://veterinarypartner.vin.com/default.aspx?pid=19239&catId=154455&id=7916340')).grid(row=25, column=8)
 
-Frontline = tk.Label(Frame, text="Frontline - 1 drop/lb for puppies < 8 weeks and kittens <6 weeks").grid(row=26, column=0)
-Frontline_Dosage = tk.Label(Frame, textvariable=f"{dose_Frontline}").grid(row=26, column=1)
-Frontline_Species = tk.Label(Frame, text="cats/dogs").grid(row=26, column=2)
-Frontline_MGperKG = tk.Label(Frame, text="").grid(row=26, column=3)
-Frontline_Unit = tk.Label(Frame, text="drops").grid(row=26, column=4)
-Frontline_Route = tk.Label(Frame, text="topical").grid(row=26, column=5)
-Frontline_Frequency = tk.Label(Frame, text="SID").grid(row=26, column=6)
-Frontline_Duration = tk.Label(Frame, text="Once a month").grid(row=26, column=7)
-Frontline_Used_For = tk.Button(Frame, text="Flea preventative", command=lambda: webbrowser.open('https://www.drugs.com/vet/frontline-plus-for-dogs-puppies.html')).grid(row=26, column=8)
+# Frontline = tk.Label(Frame, text="Frontline - 1 drop/lb for puppies < 8 weeks and kittens <6 weeks").grid(row=26, column=0)
+# Frontline_Dosage = tk.Label(Frame, textvariable=f"{dose_Frontline}").grid(row=26, column=1)
+# Frontline_Species = tk.Label(Frame, text="cats/dogs").grid(row=26, column=2)
+# Frontline_MGperKG = tk.Label(Frame, text="").grid(row=26, column=3)
+# Frontline_Unit = tk.Label(Frame, text="drops").grid(row=26, column=4)
+# Frontline_Route = tk.Label(Frame, text="topical").grid(row=26, column=5)
+# Frontline_Frequency = tk.Label(Frame, text="SID").grid(row=26, column=6)
+# Frontline_Duration = tk.Label(Frame, text="Once a month").grid(row=26, column=7)
+# Frontline_Used_For = tk.Button(Frame, text="Flea preventative", command=lambda: webbrowser.open('https://www.drugs.com/vet/frontline-plus-for-dogs-puppies.html')).grid(row=26, column=8)
 
 Metronidazole_250_500mg_Tablets = tk.Label(Frame, text="Metronidazole (250, 500 mg tablets)").grid(row=27, column=0)
 Metronidazole_250_500mg_Tablets_Dosage = tk.Label(Frame, textvariable=f"{dose_Metronidazole_250_500mg_Tablets}").grid(row=27, column=1)
@@ -748,15 +747,15 @@ Ponazuril_150_Frequency = tk.Label(Frame, text="SID").grid(row=32, column=6)
 Ponazuril_150_Duration = tk.Label(Frame, text="3 days; repeat in 10 days").grid(row=32, column=7)
 Ponazuril_150_Used_For = tk.Button(Frame, text="Coccidia", command=lambda: webbrowser.open('https://veterinarypartner.vin.com/default.aspx?pid=19239&catId=154455&id=4952795')).grid(row=32, column=8)
 
-Praziquantel = tk.Label(Frame, text="Praziquantel - see below").grid(row=33, column=0)
-Praziquantel_Dosage = tk.Label(Frame, textvariable=f"{dose_Praziquantel}").grid(row=33, column=1)
-Praziquantel_Species = tk.Label(Frame, text="cats/dogs").grid(row=33, column=2)
-Praziquantel_MGperKG = tk.Label(Frame, text="").grid(row=33, column=3)
-Praziquantel_Unit = tk.Label(Frame, text="").grid(row=33, column=4)
-Praziquantel_Route = tk.Label(Frame, text="SQ").grid(row=33, column=5)
-Praziquantel_Frequency = tk.Label(Frame, text="Once").grid(row=33, column=6)
-Praziquantel_Duration = tk.Label(Frame, text="Once").grid(row=33, column=7)
-Praziquantel_Used_For = tk.Button(Frame, text="Tapeworms", command=lambda: webbrowser.open('https://veterinarypartner.vin.com/default.aspx?pid=19239&catId=154455&id=4951413')).grid(row=33, column=8)
+# Praziquantel = tk.Label(Frame, text="Praziquantel - see below").grid(row=33, column=0)
+# Praziquantel_Dosage = tk.Label(Frame, textvariable=f"{dose_Praziquantel}").grid(row=33, column=1)
+# Praziquantel_Species = tk.Label(Frame, text="cats/dogs").grid(row=33, column=2)
+# Praziquantel_MGperKG = tk.Label(Frame, text="").grid(row=33, column=3)
+# Praziquantel_Unit = tk.Label(Frame, text="").grid(row=33, column=4)
+# Praziquantel_Route = tk.Label(Frame, text="SQ").grid(row=33, column=5)
+# Praziquantel_Frequency = tk.Label(Frame, text="Once").grid(row=33, column=6)
+# Praziquantel_Duration = tk.Label(Frame, text="Once").grid(row=33, column=7)
+# Praziquantel_Used_For = tk.Button(Frame, text="Tapeworms", command=lambda: webbrowser.open('https://veterinarypartner.vin.com/default.aspx?pid=19239&catId=154455&id=4951413')).grid(row=33, column=8)
 
 Pyrantel_Pamoate = tk.Label(Frame, text="Pyrantel Pamoate (50 mg/ml)").grid(row=34, column=0)
 Pyrantel_Pamoate_Dosage = tk.Label(Frame, textvariable=f"{dose_Pyrantel_Pamoate}").grid(row=34, column=1)
@@ -768,15 +767,15 @@ Pyrantel_Pamoate_Frequency = tk.Label(Frame, text="Once").grid(row=34, column=6)
 Pyrantel_Pamoate_Duration = tk.Label(Frame, text="Repeat in 14 days").grid(row=34, column=7)
 Pyrantel_Pamoate_Used_For = tk.Button(Frame, text="Hookworms, Roundworms", command=lambda: webbrowser.open('https://veterinarypartner.vin.com/default.aspx?pid=19239&catId=154455&id=4952177')).grid(row=34, column=8)
 
-Revolution = tk.Label(Frame, text="Revolution - see below").grid(row=35, column=0)
-Revolution_Dosage = tk.Label(Frame, textvariable=f"{dose_Revolution}").grid(row=35, column=1)
-Revolution_Species = tk.Label(Frame, text="cats/dogs").grid(row=35, column=2)
-Revolution_MGperKG = tk.Label(Frame, text="").grid(row=35, column=3)
-Revolution_Unit = tk.Label(Frame, text="").grid(row=35, column=4)
-Revolution_Route = tk.Label(Frame, text="topical").grid(row=35, column=5)
-Revolution_Frequency = tk.Label(Frame, text="SID").grid(row=35, column=6)
-Revolution_Duration = tk.Label(Frame, text="Once").grid(row=35, column=7)
-Revolution_Used_For = tk.Button(Frame, text="Ear mites, fleas, other mites", command=lambda: webbrowser.open('https://www.drugs.com/vet/revolution.html')).grid(row=35, column=8)
+# Revolution = tk.Label(Frame, text="Revolution - see below").grid(row=35, column=0)
+# Revolution_Dosage = tk.Label(Frame, textvariable=f"{dose_Revolution}").grid(row=35, column=1)
+# Revolution_Species = tk.Label(Frame, text="cats/dogs").grid(row=35, column=2)
+# Revolution_MGperKG = tk.Label(Frame, text="").grid(row=35, column=3)
+# Revolution_Unit = tk.Label(Frame, text="").grid(row=35, column=4)
+# Revolution_Route = tk.Label(Frame, text="topical").grid(row=35, column=5)
+# Revolution_Frequency = tk.Label(Frame, text="SID").grid(row=35, column=6)
+# Revolution_Duration = tk.Label(Frame, text="Once").grid(row=35, column=7)
+# Revolution_Used_For = tk.Button(Frame, text="Ear mites, fleas, other mites", command=lambda: webbrowser.open('https://www.drugs.com/vet/revolution.html')).grid(row=35, column=8)
 
 Trazadone_Standard = tk.Label(Frame, text="Trazadone Standard Dose").grid(row=36, column=0)
 Trazadone_Standard_Dosage = tk.Label(Frame, textvariable=f"{dose_Trazadone_Standard}").grid(row=36, column=1)
@@ -943,4 +942,3 @@ master.bind('<Return>', calculate)
 
 # The mainloop
 tk.mainloop()
-
